@@ -1,0 +1,82 @@
+/*Clases de card*/
+
+.card-item{
+    position : abosolute;
+    padding : 1rem;
+    border-bottom: 1px solid black;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.marco{
+    margin: 1rem;
+}
+
+.btn{
+    width: 50%;
+    background: tomato;
+    border-radius: 3%;
+    padding: .4rem;
+    border: 0px;
+    color: white;
+    transition: all .3s;
+}
+
+.btn:hover{
+    color: black;
+    border: 1px solid tomato; 
+    background: white;
+}
+
+.btn-min{
+    width: 5rem;
+    background: red;
+    color : white;
+    border: 0px;
+    padding: 1rem;
+    border-radius: 10%;
+    transition: all .2s;
+}
+
+.btn-min:hover{
+    background: tomato;
+}
+
+.input-add{
+    padding: 1rem;
+    width: 90%;
+    border: 0px;
+    border-bottom: 1px solid black;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: all .3s;
+}
+
+.input-add:focus{
+    border-color: orangered;
+}
+
+.btn-add{
+    color : white;
+    background: #ff5500;
+    border-radius: 10%;
+    border : 0px;
+    padding: 1rem;
+    transition: all .3s;
+}
+
+.btn-add:hover{
+    background: #ff0500;
+}
+
+/*Colors*/
+
+.bg-gray{
+    background: #fff4e6;
+}
