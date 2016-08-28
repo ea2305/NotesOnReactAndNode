@@ -23,7 +23,7 @@ export default class App extends Component{
 //Estados de componentes
 /**/
     componentWillMount = () => {
-        let socket = setInterval( this.callData , 2000 );
+        let socket = setInterval( this.callData , 1000 );
         this.setState({ socket });
     }
 
@@ -33,10 +33,9 @@ export default class App extends Component{
 
     callData = () => {
         //console.log( "I'm load \ :v /" )
-
         //Peticion GET con axios
         //axios.get('http://gladys-api.com/prueba/jsonAxios.json')
-        axios.get('http://localhost:5000/note/get')
+        axios.get('https://serene-woodland-96456.herokuapp.com/note/get')
                 .then(function (response) {
                     var elements = response.data; 
                     this.setState({ elements })
@@ -53,8 +52,12 @@ export default class App extends Component{
         // let elements = this.state.elements;
         // let start    = elements.indexOf( target );
         // elements.splice( start , 1 )
+        //Polymorfismo
+        //this.setState({ elements });
 
-        axios.post('http://localhost:5000/note/delete',{
+        //axios.post('http://localhost:5000/note/delete',{
+        axios.post('https://serene-woodland-96456.herokuapp.com/note/delete',{
+            
                     'data' : target
                 })
                 .then(function (response) {
@@ -63,9 +66,6 @@ export default class App extends Component{
                 .catch(function (error) {
                     console.log(error);
                 });
-
-        //Polymorfismo
-        //this.setState({ elements });
     }
 
     addCard = ( element ) => {
@@ -74,7 +74,7 @@ export default class App extends Component{
         // elements.push( element );
         // this.setState({ elements });
 
-        axios.post('http://localhost:5000/note/create',{
+        axios.post('https://serene-woodland-96456.herokuapp.com/note/create',{
                     'data' : element
                 })
                 .then(function (response) {
